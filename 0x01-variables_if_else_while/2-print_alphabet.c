@@ -13,11 +13,12 @@ int main(void)
 
 			while (n <= 122)
 			{
-				putchat(n);
+				putchar(n);
 				n++;
 			}
 			{
 				putchar('\n');
 				putchar(n);
-					return (0);
+				return (0);
+			}
 }
