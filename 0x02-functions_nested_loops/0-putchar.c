@@ -1,12 +1,14 @@
 #include "main.h"
+
 /**
  * main - Entry point
- * description: 'prints_putchar to stdout'
+ *
  * Return: Always 0
  *
  */
 int main(void)
-{
+{ 
+
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');
