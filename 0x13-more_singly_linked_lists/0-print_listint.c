@@ -5,7 +5,7 @@
  * 
  * @h: head
  *
- * Return: number of nodes
+ * Return: number of node
  */
 size_t print_listint(const listint_t *h)
 {
