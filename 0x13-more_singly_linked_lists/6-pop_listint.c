@@ -3,18 +3,19 @@
 /**
  * and returns the head node's data n.
  * @head: A pointer to listint_t structure.
- * Return: i or 0
+ * Return: i or 
  */
 int pop_listint(listint_t **head)
 {
+	listint_t *nv;
 	int i;
-	listint_t *new;
 
-	if (!head || !*head)
+	if (*head == NULL)
 		return (0);
-	new = (*head)->next;
+
 	i = (*head)->n;
+	nv = (*head)->next;
 	free(*head);
-	*head = new;
+	*head = nv;
 	return (i);
 }
