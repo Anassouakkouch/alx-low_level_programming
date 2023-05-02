@@ -3,6 +3,7 @@
 /**
  * and returns the head node's data n.
  * @head: A pointer to listint_t structure.
+ * Return: i or 0
  */
 int pop_listint(listint_t **head)
 {
