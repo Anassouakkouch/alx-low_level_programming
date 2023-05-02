@@ -6,36 +6,31 @@
  * 
  * @index: index of the node to delete
  *
- * Return: 1 (Success), or -1 (Fail)
+ * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *tep = *head;
-	listint_t *curr = NULL;
-	unsigned int i = 0;
+	unsigned int i;
+	listint_t *privé, *nextt;
 
-	if (*head == NULL)
+	privé = *head;
+	if (index != 0)
+	{
+		for (i = 0 ; i < index - 1 && privé != NULL ; i++)
+			privé = privé->next;
+	}
+	if (privé == NULL || (privé->nextt == NULL && index != 0))
 		return (-1);
-
-	if (index == 0)
+	nextt = privé->nextt;
+	if (index != 0)
 	{
-		*head = (*head)->next;
-		free(tmp);
-		return (1);
+		privé->nextt = nextt->nextt;
+		free(nextt);
 	}
-
-	while (i < index - 1)
+	else
 	{
-		if (!tmp || !(tmp->next))
-			return (-1);
-		tmp = tmp->next;
-		i++;
+		free(privé);
+		*head = nextt;
 	}
-
-
-	curr = tmp->next;
-	tmp->next = curr->next;
-	free(curr);
-
 	return (1);
 }
