@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * binary_to_uint int
- * @b: char
+ * binary_to_uint convert binary to unsign int
+ * @b: char & string
  * Return: converted decimal number or 0
  */
 unsigned int binary_to_uint(const char *b)
@@ -23,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 	for (pow = 1, tot = 0, len--; len >= 0; len--, pow *= 2)
 	{
 		if (b[len] == '1')
-			total += pow;
+			tot += pow;
 	}
 
 	return (tot);
